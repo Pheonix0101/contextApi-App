@@ -1,21 +1,16 @@
 import React, { useContext } from "react";
 import userContext from "../context/userContext";
 
-function Profile() {
+function Getname() {
   const { user } = useContext(userContext);
 
-  if (!user)
-    return (
-      <div>
-        <h3>User Not Found, Please login</h3>
-      </div>
-    );
+  if (!user) return "Profile name:";
   else
     return (
       <div>
-        <h2> Welcome, {user.username}</h2>
+        <h3>Profile name: {user.name}</h3>
       </div>
     );
 }
 
-export default Profile;
+export default Getname;
